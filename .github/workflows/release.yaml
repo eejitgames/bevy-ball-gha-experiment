@@ -77,9 +77,6 @@ jobs:
     needs:
       - check-if-upload-to-itch-is-configured
       - release-wasm
-      - release-linux
-      - release-windows
-      - release-macos
     if: ${{ needs.check-if-upload-to-itch-is-configured.outputs.should-upload == 'yes' }}
 
     steps:
